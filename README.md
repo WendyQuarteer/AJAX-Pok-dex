@@ -18,10 +18,10 @@ Make a Pokédex using this API.
 - [x] You can search a pokémon by name and by ID
 Of said pokémon you need to show:
 - [x] The ID-number
-- [] An image (sprite)
+- [x] An image (sprite)
 - [] At least 4 "moves"
 - [] The previous evolution, only if it exists, along with their name and image. Be carefull, you cannot just do ID-1 
-- to get the previous form, for example look into "magmar" - "magmortar". You have to use a seperate api call for this!
+to get the previous form, for example look into "magmar" - "magmortar". You have to use a seperate api call for this!
 Make your web page look like a pokédex by adding a little CSS.
 
 Note: For this exercise, the goal is to keep working on it, until the deadline is reached. If you are finished adding 
@@ -39,7 +39,9 @@ the user input can't be found, provide an error with .catch.
 - [x] JS: make variable for pokemon-Id and display in console.
 - [x] JS: make variable for pokemon-name and display in console.
 - [x] JS: make variable for pokemon-img and display in console. 
-- 
+- [x] JS: display the array of "moves" objects in console.
+- [x] JS: use map function to display a list of all moves.
+- [] JS: pick 4 random moves.
 
 
 
