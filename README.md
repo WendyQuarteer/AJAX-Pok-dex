@@ -15,9 +15,9 @@
 Make a Pokédex using this API.
 
 ##### Basic functionality that is expected (read: core features):
-- [] You can search a pokémon by name and by ID
+- [x] You can search a pokémon by name and by ID
 Of said pokémon you need to show:
-- [] The ID-number
+- [x] The ID-number
 - [] An image (sprite)
 - [] At least 4 "moves"
 - [] The previous evolution, only if it exists, along with their name and image. Be carefull, you cannot just do ID-1 
@@ -36,6 +36,10 @@ web page on GitHub!
 - [x] JS: add an eventlistener so the button will call the function: getData and in case
 the user input can't be found, provide an error with .catch.
 - [x] JS: fetch the pokeAPI and raise the limit.
+- [x] JS: make variable for pokemon-Id and display in console.
+- [x] JS: make variable for pokemon-name and display in console.
+- [x] JS: make variable for pokemon-img and display in console. 
+- 
 
 
 
