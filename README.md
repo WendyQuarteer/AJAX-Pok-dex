@@ -31,8 +31,11 @@ web page on GitHub!
 
 #### My steps
 - [x] Make repository and add necessary files.
-- [] Look for information AJAX flow and look back at API exercises.  
-
+- [x] Look for information AJAX flow and look back at API exercises.
+- [x] HTML: add an input-field and a button.
+- [x] JS: add an eventlistener so the button will call the function: getData and in case
+the user input can't be found, provide an error with .catch.
+- [x] JS: fetch the pokeAPI and raise the limit.
 
 
 
