@@ -22,7 +22,7 @@ async function getData(string) {
     //get the array of the moves objects.
     const moves = data.moves;
     console.log(moves);
-    //create a list from: move, of the array of objects.
+    //display a list from: move, of the array of objects.
     const pokeMoves = moves.map(({move}) => move);
     console.log(pokeMoves);
 
