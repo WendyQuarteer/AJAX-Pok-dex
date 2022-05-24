@@ -16,7 +16,6 @@ main {
 #poke-img {
     display: flex;
     height: 300px;
-    margin-left: 120px;
 }
 #search {
     display: flex;
@@ -31,5 +30,5 @@ main {
 }
 #name #id #moves{
     display: flex;
-    padding: 5px;
+    padding: 20px;
 }

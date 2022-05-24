@@ -21,8 +21,8 @@ Of said pokémon you need to show:
 - [x] An image (sprite)
 - [x] At least 4 "moves"
 - [] The previous evolution, only if it exists, along with their name and image. Be carefull, you cannot just do ID-1 
-to get the previous form, for example look into "magmar" - "magmortar". You have to use a seperate api call for this!
-Make your web page look like a pokédex by adding a little CSS.
+     to get the previous form, for example look into "magmar" - "magmortar". You have to use a seperate api call for this!
+- [x] Make your web page look like a pokédex by adding a little CSS.
 
 Note: For this exercise, the goal is to keep working on it, until the deadline is reached. If you are finished adding 
 all "core features", look at what else the API has to offer, and try adding some other features. At the end of the 
@@ -43,6 +43,10 @@ the user input can't be found, provide an error with .catch.
 - [x] JS: use map function to display a list of all moves.
 - [x] JS: display 4 random moves.
 - [x] JS: clone inside template.
+- [x] JS: fetch the poke species.
+- [x] JS: fetch API species.
+- [x] js: fetch API evolution chain.
+- [] JS: get first evolution.
 
 
 
