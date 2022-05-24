@@ -41,7 +41,7 @@ the user input can't be found, provide an error with .catch.
 - [x] JS: make variable for pokemon-img and display in console. 
 - [x] JS: display the array of "moves" objects in console.
 - [x] JS: use map function to display a list of all moves.
-- [] JS: pick 4 random moves.
+- [x] JS: display 4 random moves.
 
 
 

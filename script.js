@@ -25,6 +25,16 @@ async function getData(string) {
     //display a list from: move, of the array of objects.
     const pokeMoves = moves.map(({move}) => move);
     console.log(pokeMoves);
+    //create a new random array, to display 4 random numbers for the length of pokeMoves
+    let randomArray = Array.from({length:4},() => Math.floor(Math.random() * pokeMoves.length));
+    console.log(randomArray);
+    //link each random number to a random pokeMove.
+    for (let i = 0; i < randomArray.length; i++) {
+    const randPokeMoves= pokeMoves[randomArray[i]].name ;
+        console.log(randPokeMoves);
+    }
+
+
 
 }
 
