@@ -9,23 +9,35 @@
 </head>
 <body>
 <main>
+    <div class="container">
+        <div id="title">
+            <h1>Poke-dex</h1>
+        </div>
 
-    <div class = "container">
-        <header>Pokemon dex</header>
-        <div class = "content">
-          <form action="#" method="post">
-              <div class="field">
-                  <label for="pokemon">Who are you looking for?</label>
-                  <input type="text" name="pokemon" id="pokemon">
-              </div>
-              <div class="actions">
-                  <button type="button" id="run">Look for Pokemon
-                  </button>
-              </div>
-          </form>
+        <div id="poke-img">
+            <img src="images/pokedex-img.png" alt="image of different Pokemons" title="Pokemon">
+        </div>
 
-          <template id="tpl-pokemon">
-          </template>
+        <div id="search">
+            <form action="#" method="post">
+                <div class="field">
+                    <label for="pokemon">Who are you looking for?</label>
+                    <input type="text" name="pokemon" id="pokemon">
+                </div>
+                <div class="actions">
+                    <button type="button" id="run">Look for Pokemon
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div id="found">
+            <template id="pokeFound">
+                    <li class="id"></li>
+                    <li class="name"></li>
+                    <li class="moves"></li>
+                    <img class="img" alt="Poke-image">
+            </template>
+            <ul id="target"></ul>
         </div>
     </div>
 

@@ -1,7 +1,35 @@
-body{
+body {
     display: flex;
+    background-color: deeppink;
 }
-main{
+main {
+    display: flex;
     margin: auto;
     min-height: 100vh;
+}
+#title {
+    display: flex;
+    margin-top: -40px;
+    margin-left: 130px;
+    font-size: 33px;
+}
+#poke-img {
+    display: flex;
+    height: 300px;
+    margin-left: ;
+}
+#search {
+    display: flex;
+    border: 2px outset hotpink;
+    padding: 5px;
+}
+#pokeFound {
+    border: 2px outset salmon;
+    padding: 5px;
+    width: 250px;
+    height: 180px;
+}
+#name #id #moves{
+    display: flex;
+    padding: 5px;
 }
