@@ -1,5 +1,5 @@
 # AJAX-Pok-dex
-
+https://wendyquarteer.github.io/AJAX-Pok-dex/
 ## Practical Information
 - Repository: ajax-pokedex
 - Deadline: 3 days start 23/05/2022
@@ -19,7 +19,7 @@ Make a Pokédex using this API.
 Of said pokémon you need to show:
 - [x] The ID-number
 - [x] An image (sprite)
-- [] At least 4 "moves"
+- [x] At least 4 "moves"
 - [] The previous evolution, only if it exists, along with their name and image. Be carefull, you cannot just do ID-1 
 to get the previous form, for example look into "magmar" - "magmortar". You have to use a seperate api call for this!
 Make your web page look like a pokédex by adding a little CSS.
@@ -41,7 +41,7 @@ the user input can't be found, provide an error with .catch.
 - [x] JS: make variable for pokemon-img and display in console. 
 - [x] JS: display the array of "moves" objects in console.
 - [x] JS: use map function to display a list of all moves.
-- [] JS: display 4 random moves.
+- [x] JS: display 4 random moves.
 - [x] JS: clone inside template.
 
 

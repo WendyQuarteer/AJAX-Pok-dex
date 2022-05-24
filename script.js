@@ -36,12 +36,11 @@ async function getData(string) {
     let randomArray = Array.from({length:4},() => Math.floor(Math.random() * pokeMoves.length));
     //console.log(randomArray);
     //link each random number to a random pokeMove.
-    let randPokeMoves;
+    let randPokeMoves = "";
     for (let i = 0; i < randomArray.length; i++) {
-     randPokeMoves = pokeMoves[randomArray[i]].name ;
-        console.log(randPokeMoves);
+     randPokeMoves += pokeMoves[randomArray[i]].name + '\r\n';
     }
-    console.log(randPokeMoves);
+    console.log(randPokeMoves + " moves");
     //make variable for the template.
     const template = document.getElementById("pokeFound");
         //console.log(template + " template");
