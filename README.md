@@ -46,7 +46,9 @@ the user input can't be found, provide an error with .catch.
 - [x] JS: fetch the poke species.
 - [x] JS: fetch API species.
 - [x] js: fetch API evolution chain.
-- [] JS: get first evolution.
+- [x] JS: get first evolution-name.
+- [x] JS: get second evolution-name.
+- [x] JS: get third evolution-name.
 
 
 

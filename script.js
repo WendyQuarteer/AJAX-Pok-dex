@@ -36,9 +36,30 @@ async function getData(string) {
     const chain1 = data3.chain;
     //console.log(chain1);
     const species1 = chain1.species;
-    console.log(species1);
-    //const pokeEv1Img = species1.url;
-    //console.log(pokeEv1Img);
+    //console.log(species1);
+    const pokeEv1Name = species1.name;
+    console.log(pokeEv1Name);
+
+    const evolvesTo = chain1.evolves_to;
+    //console.log(evolvesTo);
+    const evolvesTo0 = evolvesTo[0];
+    //console.log(evolvesTo0);
+    const species2 = evolvesTo0.species;
+    //console.log(species2);
+    const pokeEv2Name  = species2.name;
+    console.log(pokeEv2Name);
+
+    const evolvesToTo = evolvesTo0.evolves_to;
+    //console.log(evolvesToTo);
+    const evolvesToTo0 = evolvesToTo[0];
+    //console.log(evolvesToTo0);
+    const species3 = evolvesToTo0.species;
+    //console.log(species3);
+    const pokeEv3Name = species3.name;
+    console.log(pokeEv3Name);
+
+
+
 
     //fetch the pokemon-id.
     const id = data1.id;
