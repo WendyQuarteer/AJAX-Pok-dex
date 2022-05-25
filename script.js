@@ -13,54 +13,9 @@ async function getData(string) {
     //await promise to get data1.
     const data1 = await response1.json();
     //show data in console.  This only shows an array with the total of all pokemons with all pokemons inside: results.
-    //console.log(data1);
+    console.log(data1);
 
-    //fetch the pokeApi species.
-    const response2 = await fetch('https://pokeapi.co/api/v2/pokemon-species/' + string);
-    //await promise to get data2.
-    const data2 = await response2.json();
-    //console.log(data2);
-
-    //make variable to get the evolution-chain.
-    const evoChain = data2.evolution_chain;
-    //console.log(evoChain);
-    //make variable to get the object value.
-    const evolution = Object.values(evoChain);
-    //console.log(evolution);
-    //fetch the object value = url.
-    const response3 = await fetch(`${evolution}`);
-    //console.log(response3)
-    //await promise to get data3.
-    const data3 = await response3.json();
-    //console.log(data3);
-    const chain1 = data3.chain;
-    //console.log(chain1);
-    const species1 = chain1.species;
-    //console.log(species1);
-    const pokeEv1Name = species1.name;
-    console.log(pokeEv1Name);
-
-    const evolvesTo = chain1.evolves_to;
-    //console.log(evolvesTo);
-    const evolvesTo0 = evolvesTo[0];
-    //console.log(evolvesTo0);
-    const species2 = evolvesTo0.species;
-    //console.log(species2);
-    const pokeEv2Name  = species2.name;
-    console.log(pokeEv2Name);
-
-    const evolvesToTo = evolvesTo0.evolves_to;
-    //console.log(evolvesToTo);
-    const evolvesToTo0 = evolvesToTo[0];
-    //console.log(evolvesToTo0);
-    const species3 = evolvesToTo0.species;
-    //console.log(species3);
-    const pokeEv3Name = species3.name;
-    console.log(pokeEv3Name);
-
-
-
-
+    //get the requested pokemon.
     //fetch the pokemon-id.
     const id = data1.id;
     //console.log(id);
@@ -88,6 +43,92 @@ async function getData(string) {
         randPokeMoves += pokeMoves[randomArray[i]].name + '\r\n';
     }
     //console.log(randPokeMoves);
+
+
+
+    //fetch the pokeApi species.
+    const response2 = await fetch('https://pokeapi.co/api/v2/pokemon-species/' + string);
+    //await promise to get data2.
+    const data2 = await response2.json();
+    //console.log(data2);
+    //make variable to get the evolution-chain.
+    const evoChain = data2.evolution_chain;
+    //console.log(evoChain);
+    //make variable to get the object value.
+    const evolution = Object.values(evoChain);
+    //console.log(evolution);
+
+    //fetch the object evolution.
+    const response3 = await fetch(`${evolution}`);
+    //console.log(response3)
+    //await promise to get data3.
+    const data3 = await response3.json();
+    //console.log(data3);
+
+    //get the name of evolution 1.
+    const chain = data3.chain;
+    //console.log(chain1);
+    const species1 = chain.species;
+    //console.log(species1);
+    const pokeEv1Name = species1.name;
+    //console.log(pokeEv1Name);
+    //fetch the pokeAPI and await operator for promise.
+    const response4 = await fetch('https://pokeapi.co/api/v2/pokemon/' + pokeEv1Name);
+    //await promise to get data4.
+    const data4 = await response4.json();
+    //show data in console.  This only shows an array with the total of all pokemons with all pokemons inside: results.
+    //console.log(data4);
+    const sprites1 = data4.sprites;
+    //console.log(sprites1);
+    //display image in console
+    const img1 = Object.values(sprites1)[0];
+    //console.log(img1);
+
+
+
+    //get the name of evolution 2.
+    const evolvesTo = chain.evolves_to;
+    //console.log(evolvesTo);
+    const evolvesTo0 = evolvesTo[0];
+    //console.log(evolvesTo0);
+    const species2 = evolvesTo0.species;
+    //console.log(species2);
+    const pokeEv2Name  = species2.name;
+    //console.log(pokeEv2Name);
+    //fetch the pokeAPI and await operator for promise.
+    const response5 = await fetch('https://pokeapi.co/api/v2/pokemon/' + pokeEv2Name);
+    //await promise to get data5.
+    const data5 = await response5.json();
+    //show data in console.  This only shows an array with the total of all pokemons with all pokemons inside: results.
+    //console.log(data5);
+    const sprites2 = data5.sprites;
+    //console.log(sprites2);
+    //display image in console
+    const img2 = Object.values(sprites2)[0];
+    //console.log(img2);
+
+    //get the name of evolution 3.
+    const evolvesToTo = evolvesTo0.evolves_to;
+    //console.log(evolvesToTo);
+    const evolvesToTo0 = evolvesToTo[0];
+    //console.log(evolvesToTo0);
+    const species3 = evolvesToTo0.species;
+    //console.log(species3);
+    const pokeEv3Name = species3.name;
+    //console.log(pokeEv3Name);
+    //fetch the pokeAPI and await operator for promise.
+    const response6 = await fetch('https://pokeapi.co/api/v2/pokemon/' + pokeEv3Name);
+    //await promise to get data6.
+    const data6 = await response6.json();
+    //show data in console.  This only shows an array with the total of all pokemons with all pokemons inside: results.
+    //console.log(data6);
+    const sprites3 = data6.sprites;
+    //console.log(sprites3);
+    //display image in console
+    const img3 = Object.values(sprites3)[0];
+    //console.log(img3);
+
+
     //make variable for the template.
     const template = document.getElementById("pokeFound");
     //console.log(template + " template");
@@ -101,7 +142,9 @@ async function getData(string) {
     clone.querySelector(".id").innerText = id;
     clone.querySelector(".moves").innerText = randPokeMoves;
     clone.querySelector(".img").src = img;
-    //clone.querySelector(".Ev1Img").src = ;
+    clone.querySelector(".Ev1Img").src = img1;
+    clone.querySelector(".Ev2Img").src = img2;
+    clone.querySelector(".Ev3Img").src = img3;
     //clone the template and insert it in the ol.
     target.appendChild(clone);
 }

@@ -49,6 +49,7 @@ the user input can't be found, provide an error with .catch.
 - [x] JS: get first evolution-name.
 - [x] JS: get second evolution-name.
 - [x] JS: get third evolution-name.
+- [x] JS: display the 3 evolutions.
 
 
 
