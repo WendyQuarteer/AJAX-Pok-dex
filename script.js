@@ -1,8 +1,8 @@
 //add eventListener for when user clicks the button.
-document.getElementById("run").addEventListener("click", (e) => {
-   e.preventDefault();
+document.getElementById("run").addEventListener("click", () => {
     //get the value from the input-field.
-    const input = document.getElementById("pokemon").value;
+    let input = document.getElementById("pokemon").value;
+    //console.log(input);
     //call the function getData which is going to relate on the input-value.
     getData(input).catch(error => {
         alert("No such Pokemon found!" + error)
@@ -11,18 +11,6 @@ document.getElementById("run").addEventListener("click", (e) => {
     });
 });
 
-
-//make variable for the template.
-const template = document.getElementById("pokeFound");
-//console.log(template + " template");
-//make variable for target.
-const target = document.getElementById("target");
-//console.log(target + " target");
-//make variable to clone the template.
-const clone = template.content.cloneNode(true);
-//console.log(clone.innerHTML + " clone");
-
-
 //concatenate the input (=string) with he API url.
 async function getData(string) {
     //fetch the pokeAPI and await operator for promise.
@@ -30,7 +18,7 @@ async function getData(string) {
     //await promise to get data1.
     const data1 = await response1.json();
     //show data in console.  This only shows an array with the total of all pokemons with all pokemons inside: results.
-    console.log(data1);
+    //console.log(data1);
 
     //get the requested pokemon.
     //fetch the pokemon-id.
@@ -41,10 +29,13 @@ async function getData(string) {
     //console.log(name);
     //get the pokemon pictures.
     const sprites = data1.sprites;
-    console.log(sprites);
+    //console.log(sprites);
     //display first image in console
     const img = sprites.front_default;
     //console.log(img);
+    const evImg = document.createElement('img');
+    evImg.src = img;
+    document.getElementById('pokePic').appendChild(evImg);
     //get the array of the moves objects.
     const moves = data1.moves;
     //console.log(moves);
@@ -99,9 +90,12 @@ async function getData(string) {
     //display image in console
     const img1 = sprites1.front_default;
     //console.log(img1);
-    clone.querySelector(".Ev1Img").src = img1;
+    //create new img-element.
+    const evImg1 = document.createElement('img');
+    evImg1.src = img1;
+    document.getElementById('evolution').appendChild(evImg1);
 
-   if (chain.evolves_to.length !== 0) {
+    if (chain.evolves_to.length !== 0) {
         //get the name of evolution 2.
         const evolvesTo = chain.evolves_to;
         //console.log(evolvesTo);
@@ -122,9 +116,12 @@ async function getData(string) {
         //display image in console
         const img2 = sprites2.front_default;
         //console.log(img2);
-        clone.querySelector(".Ev2Img").src = img2;
+        //create new img-element.
+        const evImg2 = document.createElement('img');
+        evImg2.src = img2;
+        document.getElementById('evolution').appendChild(evImg2);
 
-        if (evolvesTo0.evolves_to.length !==0) {
+        if (evolvesTo0.evolves_to.length !== 0) {
             //get the name of evolution 3.
             const evolvesToTo = evolvesTo0.evolves_to;
             //console.log(evolvesToTo);
@@ -145,18 +142,28 @@ async function getData(string) {
             //display image in console
             const img3 = sprites3.front_default;
             //console.log(img3);
-            clone.querySelector(".Ev3Img").src = img3;
+            //create new img-element.
+            const evImg3 = document.createElement('img');
+            evImg3.src = img3;
+            document.getElementById('evolution').appendChild(evImg3);
         }
     }
-
+    //make variable for the template.
+    const template = document.getElementById("pokeFound");
+    //console.log(template + " template");
+    //make variable for target.
+    const target = document.getElementById("target");
+    //console.log(target + " target");
+    //make variable to clone the template.
+    const clone = template.content.cloneNode(true);
+    //console.log(clone.innerHTML + " clone");
+    //clone.querySelector(".img").src = img;
     clone.querySelector(".name").innerText = name;
     clone.querySelector(".id").innerText = id;
     clone.querySelector(".moves").innerText = randPokeMoves;
-    clone.querySelector(".img").src = img;
-
     //clone the template and insert it in the ol.
     //Right before container will be filled, empty container.
-    //target.innerHTML = " ";
+    target.innerHTML = " ";
     target.appendChild(clone);
 }
 

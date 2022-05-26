@@ -51,11 +51,11 @@ the user input can't be found, provide an error with .catch.
 - [x] JS: get third evolution-name.
 - [x] JS: display the 3 evolutions.
 
-Before searching a new pokemon you need to refresh the page, otherwise it will not work.
+PROBLEM: the pictures add-up, needs to be solved!!!!!!!
 
 Any feed-back, tips, ideas are more than welcome!
 
-(I would really have loved to work and finish all exceptions.)
+(Wasn't able to catch all exceptions "yet".)
 
 
 

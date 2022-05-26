@@ -32,30 +32,20 @@ main {
 #found {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border: 7px outset palevioletred;
     background-color: hotpink;
 }
-.evolution {
-    display: flex;
-}
-.firstEv {
-    display: flex;
-    justify-content: center;
-    width: 100px;
+.pokeFound{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    margin: 5px;
 }
-.secondEv {
+#evolution {
     display: flex;
-    justify-content: center;
-    width: 100px;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    margin: 5px;
-}
-.thirdEv {
-    display: flex;
-    justify-content: center;
-    width: 100px;
-    padding: 10px;
-    margin: 5px;
 }
