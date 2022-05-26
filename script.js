@@ -1,5 +1,6 @@
 //add eventListener for when user clicks the button.
-document.getElementById("run").addEventListener("click", () => {
+document.getElementById("run").addEventListener("click", (e) => {
+   e.preventDefault();
     //get the value from the input-field.
     const input = document.getElementById("pokemon").value;
     //call the function getData which is going to relate on the input-value.
@@ -155,7 +156,7 @@ async function getData(string) {
 
     //clone the template and insert it in the ol.
     //Right before container will be filled, empty container.
-    target.innerHTML = " ";
+    //target.innerHTML = " ";
     target.appendChild(clone);
 }
 

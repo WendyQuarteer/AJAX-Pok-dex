@@ -1,6 +1,6 @@
 body {
     display: flex;
-    background-color: deeppink;
+    background-color: palevioletred;
 }
 main {
     display: flex;
@@ -9,27 +9,53 @@ main {
 }
 #title {
     display: flex;
+    justify-content: center;
     margin-top: -40px;
-    margin-left: 140px;
     font-size: 33px;
 }
 #poke-img {
     display: flex;
-    height: 320px;
+    justify-content: center;
+    margin-top: -60px;
+    height: 400px;
     filter: drop-shadow(0 0 5rem chartreuse);
 }
 #search {
     display: flex;
-    border: 4px outset chartreuse;
-    padding: 5px;
-    background-color: chartreuse;
+    justify-content: center;
+    border: 6px outset palevioletred;
+    padding: 7px;
+    margin: 10px;
+    background-color: hotpink;
 }
+
 #found {
-    border: 4px outset chartreuse;
-    padding: 5px;
-    background-color: deeppink;
-}
-#name #id #moves{
     display: flex;
-    padding: 20px;
+    justify-content: center;
+    border: 7px outset palevioletred;
+    background-color: hotpink;
+}
+.evolution {
+    display: flex;
+}
+.firstEv {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    padding: 10px;
+    margin: 5px;
+}
+.secondEv {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    padding: 10px;
+    margin: 5px;
+}
+.thirdEv {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    padding: 10px;
+    margin: 5px;
 }
