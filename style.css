@@ -1,6 +1,6 @@
 body {
     display: flex;
-    background-color: deepskyblue;
+    background-color: deeppink;
 }
 main {
     display: flex;
@@ -10,21 +10,22 @@ main {
 #title {
     display: flex;
     margin-top: -40px;
-    margin-left: 240px;
+    margin-left: 140px;
     font-size: 33px;
 }
 #poke-img {
     display: flex;
-    height: 300px;
+    height: 320px;
+    filter: drop-shadow(0 0 5rem chartreuse);
 }
 #search {
     display: flex;
-    border: 2px outset hotpink;
+    border: 4px outset chartreuse;
     padding: 5px;
-    background-color: green;
+    background-color: chartreuse;
 }
 #found {
-    border: 2px outset salmon;
+    border: 4px outset chartreuse;
     padding: 5px;
     background-color: deeppink;
 }
