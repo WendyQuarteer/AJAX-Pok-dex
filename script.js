@@ -1,16 +1,15 @@
 //add eventListener for when user clicks the button.
-document.getElementById("run").addEventListener("click", () => {
+document.getElementById('run').addEventListener('click', () => {
     //get the value from the input-field.
-    let input = document.getElementById("pokemon").value;
+    let input = document.getElementById('pokemon').value;
     //console.log(input);
     //call the function getData which is going to relate on the input-value.
     getData(input).catch(error => {
-        alert("No such Pokemon found!" + error)
+        alert('No such Pokemon found!' + error)
         console.log('Error Fetching pokemon')
         console.log(error)
     });
 });
-
 //concatenate the input (=string) with he API url.
 async function getData(string) {
     //fetch the pokeAPI and await operator for promise.
@@ -35,6 +34,7 @@ async function getData(string) {
     //console.log(img);
     const evImg = document.createElement('img');
     evImg.src = img;
+    document.getElementById('pokePic').innerHTML = "";
     document.getElementById('pokePic').appendChild(evImg);
     //get the array of the moves objects.
     const moves = data1.moves;
@@ -93,7 +93,9 @@ async function getData(string) {
     //create new img-element.
     const evImg1 = document.createElement('img');
     evImg1.src = img1;
-    document.getElementById('evolution').appendChild(evImg1);
+    //clear the images from last search so they don't add-up.
+    document.getElementById('evoPics').innerHTML = "";
+    document.getElementById('evoPics').appendChild(evImg1);
 
     if (chain.evolves_to.length !== 0) {
         //get the name of evolution 2.
@@ -119,7 +121,8 @@ async function getData(string) {
         //create new img-element.
         const evImg2 = document.createElement('img');
         evImg2.src = img2;
-        document.getElementById('evolution').appendChild(evImg2);
+        //document.getElementById('evoPics').innerHTML = "";
+        document.getElementById('evoPics').appendChild(evImg2);
 
         if (evolvesTo0.evolves_to.length !== 0) {
             //get the name of evolution 3.
@@ -145,14 +148,15 @@ async function getData(string) {
             //create new img-element.
             const evImg3 = document.createElement('img');
             evImg3.src = img3;
-            document.getElementById('evolution').appendChild(evImg3);
+            //document.getElementById('evoPics').innerHTML = "";
+            document.getElementById('evoPics').appendChild(evImg3);
         }
     }
     //make variable for the template.
-    const template = document.getElementById("pokeFound");
+    const template = document.getElementById('pokeFound');
     //console.log(template + " template");
     //make variable for target.
-    const target = document.getElementById("target");
+    const target = document.getElementById('target');
     //console.log(target + " target");
     //make variable to clone the template.
     const clone = template.content.cloneNode(true);
@@ -165,6 +169,10 @@ async function getData(string) {
     //Right before container will be filled, empty container.
     target.innerHTML = " ";
     target.appendChild(clone);
+
+
+
 }
+
 
 

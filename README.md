@@ -50,24 +50,9 @@ the user input can't be found, provide an error with .catch.
 - [x] JS: get second evolution-name.
 - [x] JS: get third evolution-name.
 - [x] JS: display the 3 evolutions.
-
-PROBLEM: the pictures add-up, needs to be solved!!!!!!!
-
-Any feed-back, tips, ideas are more than welcome!
-
-(Wasn't able to catch all exceptions "yet".)
-
-
-
-
-
-
-
-
+- [x] JS: make sure pictures don't add-up.
+- [x] Ditto only has 1 move.
 
 ##### Extra challenge
 
-There are a couple of pokemon that don't play with the normal rules, add code so their cases are also handled elegantly.
-
-Ditto only has 1 move.
 Eevee has 6 evolutions.
