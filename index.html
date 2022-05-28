@@ -17,11 +17,12 @@
         <div id="poke-img">
             <img src="images/pokedex-img.png" alt="image of different Pokemons" title="Pokemon">
         </div>
+        <div id="content">
         <div id="search">
             <form action="#" method="post">
                 <div class="field">
                     <label for="pokemon">Who are you looking for?</label>
-                    <input type="text" name="pokemon" id="pokemon">
+                    <input type="text" name="pokemon" id="pokemon" value="Enter name or ID ">
                     <button type="button" id="run">Look for Pokemon></button>
                 </div>
             </form>
@@ -32,15 +33,16 @@
             </div>
             <template id="pokeFound">
                 <div class="details">
-                    <li class="id"></li>
-                    <li class="name"></li>
-                    <li class="moves"></li>
+                    <p><strong>ID:</strong><span class="id"></span></p>
+                    <p><strong>Name:</strong><span class="name"></span></p>
+                    <p><strong>Moves:</strong></br><span class="moves"></span></p>
                 </div>
             </template>
             <ul id="target"></ul>
                 <div id="evoPics">
 
                 </div>
+        </div>
         </div>
     </div>
 
